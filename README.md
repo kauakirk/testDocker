@@ -34,7 +34,7 @@ Este site é feito para parar de funcionar quando o mesmo nome é enviado duas v
 
 ## Rotas
 
-POST addr:port/ ->
+POST addr:port/create ->
 
 parâmetros:
 body {
