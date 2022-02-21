@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
   res.send('Desafio Infra\n');
 });
 
-app.post('/', async (req, res) => {
+app.post('/create', async (req, res) => {
     const { name, hour } = req.body;
     try {
         const client = await pool.connect()

@@ -58,7 +58,7 @@ const onSubmit = () => {
     body: JSON.stringify(message)
   };
 
-  fetch('http://localhost:3000', fetchOptions)
+  fetch(`${process.env.FETCH_BASE_URL}/create`, fetchOptions)
     .then(onResponse)
     .then(onTextReady);
 
