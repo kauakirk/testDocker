@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # base desafio infra
 
 ## Descrição
@@ -48,3 +49,6 @@ salva os dados no banco de dados, e se repetir o mesmo nome a aplicação falha 
 GET addr:port/getInfo ->
 
 Retorna todos os dados salvos no banco de dados# testDocker
+=======
+# testDocker
+>>>>>>> 52977a63209cfd91b9c36970042b00f1930f8107
