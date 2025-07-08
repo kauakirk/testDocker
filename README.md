@@ -47,4 +47,4 @@ salva os dados no banco de dados, e se repetir o mesmo nome a aplicação falha 
 
 GET addr:port/getInfo ->
 
-Retorna todos os dados salvos no banco de dados
+Retorna todos os dados salvos no banco de dados# testDocker
