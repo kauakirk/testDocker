@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: desafio
+    ports:
+      - "5432:5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+      - ./createTable.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: desafio
+    depends_on:
+      - db
+
+volumes:
+  dbdata:
